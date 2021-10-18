@@ -17,4 +17,6 @@ A basic social platform application that can be used to create/schedule social a
   - MobX 6.3.3 - React state manager
   - UUID 8.3.2 - UUID generator
   - Semantic UI React 2.0.4 - React theming framework
+  - React-Calendar 3.4.0 - React calendar component for picking dates
   - React Toastify 8.0.3 - React toast alerts, used to display API errors
+ 
