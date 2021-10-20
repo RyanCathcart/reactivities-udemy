@@ -19,4 +19,7 @@ A basic social platform application that can be used to create/schedule social a
   - Semantic UI React 2.0.4 - React theming framework
   - React-Calendar 3.4.0 - React calendar component for picking dates
   - React Toastify 8.0.3 - React toast alerts, used to display API errors
- 
+  - Formik 2.2.9 - React form library, used to create reusable forms
+  - Yup 0.32.11 - Object schema validation library to used with formik to create validatable forms
+  - React-Datepicker 4.2.1 - React calendar component for picking dates that doesn't rely on browser HTML5 implementation (more compatible)
+  - date-fns 2.25.0 - JavaScript date utility library, used to turn JavaScript Date objects into formatted string to be displayed on client-app
