@@ -1,14 +1,15 @@
 # Reactivities
-A basic social platform application that can be used to create/schedule social activities and post them to a public dashboard.
+A basic example of a social platform application that can be used to create/schedule social activities and post them to a public dashboard.
 
 ## Technologies Used:
-#### Back End: ASP .NET Core API
+#### Back End: ASP.NET Core API
 - Language: C# 9.0
 - Frameworks/Packages/Technologies:
   - SQLite 5.0.10 - Database
   - Entity Framework Core 5.0.10 - Object-Relational Mapper
   - AutoMapper 8.1.1 - Object-to-object mapper
   - MediatR 9.0.0 - Used to reduce dependencies between objects, specifically when making commands and queries to the database
+  - Microsoft ASP.NET Core JWT Bearer 5.0.11 - ASP.NET Core middleware that enables an application to receive an OpenID Connect bearer token
     
 #### Front End: React
 - Language: TypeScript 4.4.3
