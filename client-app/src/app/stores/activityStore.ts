@@ -8,7 +8,7 @@ export default class ActivityStore {
     selectedActivity: Activity | undefined = undefined; // The current user-selected Activity
     editMode = false;                                   // Boolean value representing if the app is in 'edit mode', ie. the edit Activity form is open
     loading = false;                                    // Boolean representing if the app is currently submitting a request to the API
-    loadingInitial = false;                              // Boolean value representing if the app is currently loading
+    loadingInitial = false;                             // Boolean value representing if the app is currently loading
 
     constructor() {
         makeAutoObservable(this);
