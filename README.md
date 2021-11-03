@@ -1,5 +1,6 @@
 # Reactivities
 A basic example of a social platform application that can be used to create/schedule social activities and post them to a public dashboard.
+Features a login and authentication system.
 
 ## Technologies Used:
 #### Back End: ASP.NET Core API
