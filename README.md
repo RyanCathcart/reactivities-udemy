@@ -25,3 +25,6 @@ Features a login and authentication system.
   - Yup 0.32.11 - Object schema validation library to used with formik to create validatable forms
   - React-Datepicker 4.2.1 - React calendar component for picking dates that doesn't rely on browser HTML5 implementation (more compatible)
   - date-fns 2.25.0 - JavaScript date utility library, used to turn JavaScript Date objects into formatted string to be displayed on client-app
+
+#### Other
+- Cloudinary - Cloud-based image and video management service. Used to upload, store, manage, manipulate, and deliver images and video for websites and apps.
