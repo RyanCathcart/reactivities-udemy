@@ -27,6 +27,7 @@ Features a login and authentication system.
   - date-fns 2.25.0 - JavaScript date utility library, used to turn JavaScript Date objects into formatted string to be displayed on client-app
   - react-dropzone 11.5.1 - React file dropzone component, used to allow user to drop an image to upload it to their profile
   - react-cropper 2.1.8 - React image cropper component, used to allow user to crop images before uploading it to their profile
+  - @microsoft/signalr 6.0.1 - Client-side signalr package for communication with server.
 
 #### Other
 - Cloudinary - Cloud-based image and video management service. Used to upload, store, manage, manipulate, and deliver images and video for websites and apps.

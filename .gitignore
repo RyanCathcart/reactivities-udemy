@@ -5,6 +5,7 @@
 
 appsettings.json
 StudentAssets/
+.vscode/
 
 # User-specific files
 *.rsuser
