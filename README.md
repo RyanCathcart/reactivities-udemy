@@ -7,6 +7,7 @@ Features a login and authentication system.
 - Language: C# 9.0
 - Frameworks/Packages/Technologies:
   - SQLite 5.0.10 - Database
+  - PostGreSQL 5.0.10 - Production Database
   - Entity Framework Core 5.0.10 - Object-Relational Mapper
   - AutoMapper 8.1.1 - Object-to-object mapper
   - MediatR 9.0.0 - Used to reduce dependencies between objects, specifically when making commands and queries to the database
@@ -32,3 +33,4 @@ Features a login and authentication system.
 
 #### Other
 - Cloudinary - Cloud-based image and video management service. Used to upload, store, manage, manipulate, and deliver images and video for websites and apps.
+- Docker (Desktop) - Used to create PostGreSQL container
