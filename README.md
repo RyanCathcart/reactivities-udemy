@@ -30,6 +30,8 @@ Features a login and authentication system.
   - react-cropper 2.1.8 - React image cropper component, used to allow user to crop images before uploading it to their profile
   - @microsoft/signalr 6.0.1 - Client-side signalr package for communication with server.
   - react-infinite-scroller 1.2.4 - Used to enable infinite scrolling through the activity list on the client-app
+  - facebook-js-sdk (Facebook JavaScript SDK) 3.3.5 - Used to enable Facebook login on the client
+  - rimraf 3.0.2 - Used in the build process to create clean builds
 
 #### Other
 - Cloudinary - Cloud-based image and video management service. Used to upload, store, manage, manipulate, and deliver images and video for websites and apps.
