@@ -36,3 +36,4 @@ Features a login and authentication system.
 #### Other
 - Cloudinary - Cloud-based image and video management service. Used to upload, store, manage, manipulate, and deliver images and video for websites and apps.
 - Docker (Desktop) - Used to create PostGreSQL container
+- SendGrid - Free email service used to send email verification links to users.
