@@ -45,7 +45,8 @@ app.UseCsp(opt => opt
     .ScriptSources(s => s.Self().CustomSources(
         "sha256-5z2+Ze10iTQeEhl5yYkIAwkHn3wDBubYTTCXC0g4QB0=", 
         "https://connect.facebook.net",
-        "sha256-ydfvHb1S9XLzSKdgIlxEY+GbFqS9he9xwYJLTVlTvMg="
+        "sha256-ydfvHb1S9XLzSKdgIlxEY+GbFqS9he9xwYJLTVlTvMg=",
+        "sha256-niDorVhPvHQMNOU+EJNgi1XozjffnrV0nrUUkrfJcEg="
     ))
 );
 
