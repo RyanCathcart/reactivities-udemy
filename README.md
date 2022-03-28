@@ -1,11 +1,12 @@
 # Reactivities
-View Website: [https://rwc-reactivities.herokuapp.com/](https://rwc-reactivities.herokuapp.com/)
 A basic example of a social platform application that can be used to create social activities/meetups/events and post them to a public dashboard.
 Features a login and authentication system, the ability to create a profile page, and a followers/following system.
+<br/><br/>
+View Website: [https://rwc-reactivities.herokuapp.com/](https://rwc-reactivities.herokuapp.com/)
 
 ## Technologies Used:
 #### Back End: ASP.NET Core API
-- Language: C# 9.0
+- Language: C# 10.0
 - Frameworks/Packages/Technologies:
   - SQLite 5.0.10 - Database
   - PostGreSQL 5.0.10 - Production Database
