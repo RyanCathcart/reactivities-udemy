@@ -2,6 +2,7 @@ using System;
 using Application.Activities;
 using Application.Core;
 using Application.Interfaces;
+using FluentValidation;
 using Infrastructure.Email;
 using Infrastructure.Photos;
 using Infrastructure.Security;
@@ -78,6 +79,8 @@ namespace API.Extensions
             services.AddScoped<EmailSender>();
             services.Configure<CloudinarySettings>(config.GetSection("Cloudinary"));
             services.AddSignalR();
+            services.AddFluentValidationAutoValidation();
+            services.AddValidatorsFromAssemblyContaining<Create>();
 
             return services;
         }

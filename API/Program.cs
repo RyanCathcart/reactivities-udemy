@@ -1,5 +1,3 @@
-using Application.Activities;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add/configure services to container
@@ -7,10 +5,6 @@ builder.Services.AddControllers(opt =>
 {
     var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
     opt.Filters.Add(new AuthorizeFilter(policy));
-})
-.AddFluentValidation(config =>
-{
-    config.RegisterValidatorsFromAssemblyContaining<Create>();
 });
 builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddIdentityServices(builder.Configuration);
@@ -20,6 +14,7 @@ builder.Services.AddIdentityServices(builder.Configuration);
 var app = builder.Build();
 
 app.UseMiddleware<ExceptionMiddleware>();
+
 app.UseXContentTypeOptions();
 app.UseReferrerPolicy(opt => opt.NoReferrer());
 app.UseXXssProtection(opt => opt.EnabledWithBlockMode());
@@ -27,7 +22,7 @@ app.UseXfo(opt => opt.Deny());
 app.UseCsp(opt => opt
     .BlockAllMixedContent()
     .StyleSources(s => s.Self().CustomSources(
-        "https://fonts.googleapis.com", 
+        "https://fonts.googleapis.com",
         "sha256-yChqzBduCCi4o4xdbXRXh4U/t1rP4UUUMJt+rB+ylUI="
     ))
     .FontSources(s => s.Self().CustomSources(
@@ -36,14 +31,14 @@ app.UseCsp(opt => opt
     .FormActions(s => s.Self())
     .FrameAncestors(s => s.Self())
     .ImageSources(s => s.Self().CustomSources(
-        "https://res.cloudinary.com", 
-        "blob:", 
+        "https://res.cloudinary.com",
+        "blob:",
         "https://www.facebook.com",
         "https://platform-lookaside.fbsbx.com",
         "data:"
     ))
     .ScriptSources(s => s.Self().CustomSources(
-        "sha256-5z2+Ze10iTQeEhl5yYkIAwkHn3wDBubYTTCXC0g4QB0=", 
+        "sha256-5z2+Ze10iTQeEhl5yYkIAwkHn3wDBubYTTCXC0g4QB0=",
         "https://connect.facebook.net",
         "sha256-ydfvHb1S9XLzSKdgIlxEY+GbFqS9he9xwYJLTVlTvMg=",
         "sha256-niDorVhPvHQMNOU+EJNgi1XozjffnrV0nrUUkrfJcEg="
@@ -66,13 +61,13 @@ else
 
 // app.UseHttpsRedirection();
 
-app.UseDefaultFiles();
-app.UseStaticFiles();
-
 app.UseCors("CorsPolicy");
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.MapControllers();
 app.MapHub<ChatHub>("/chat");
