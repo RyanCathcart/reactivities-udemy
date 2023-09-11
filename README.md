@@ -1,11 +1,14 @@
 # Reactivities
+
 A basic example of a social platform application that can be used to create social activities/meetups/events and post them to a public dashboard.
 Features a login and authentication system, the ability to create a profile page, and a followers/following system.
 <br/><br/>
 View Website: [https://rwc-reactivities.up.railway.app/](https://rwc-reactivities.up.railway.app/)
 
 ## Technologies Used:
-#### Back End: ASP.NET Core API
+
+#### Back End: ASP.NET Core Web API
+
 - Language: C# 11.0
 - Frameworks/Packages/Technologies:
   - SQLite 7.0.10 - Database
@@ -15,8 +18,9 @@ View Website: [https://rwc-reactivities.up.railway.app/](https://rwc-reactivitie
   - AutoMapper 12.0.1 - Object-to-object mapper
   - MediatR 11.1.0 - Used to reduce dependencies between objects, specifically when making commands and queries to the database
   - Microsoft ASP.NET Core JWT Bearer 7.0.10 - ASP.NET Core middleware that enables an application to receive an OpenID Connect bearer token
-    
+
 #### Front End: React
+
 - Language: TypeScript 4.4.3
 - Frameworks/Packages/Technologies:
   - Axios 0.21.4 - Promise-based HTTP client used to make HTTP requests
@@ -36,6 +40,7 @@ View Website: [https://rwc-reactivities.up.railway.app/](https://rwc-reactivitie
   - rimraf 3.0.2 - Used in the build process to create clean builds
 
 #### Other
+
 - Cloudinary - Cloud-based image and video management service. Used to upload, store, manage, manipulate, and deliver images and video for websites and apps.
 - SendGrid - Free email service used to send email verification links to users.
 - Docker (Desktop) - Used to create PostGreSQL container
