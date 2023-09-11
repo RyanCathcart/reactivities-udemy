@@ -6,14 +6,15 @@ View Website: [https://rwc-reactivities.up.railway.app/](https://rwc-reactivitie
 
 ## Technologies Used:
 #### Back End: ASP.NET Core API
-- Language: C# 10.0
+- Language: C# 11.0
 - Frameworks/Packages/Technologies:
-  - SQLite 5.0.10 - Database
-  - PostGreSQL 5.0.10 - Production Database
-  - Entity Framework Core 5.0.10 - Object-Relational Mapper
-  - AutoMapper 8.1.1 - Object-to-object mapper
-  - MediatR 9.0.0 - Used to reduce dependencies between objects, specifically when making commands and queries to the database
-  - Microsoft ASP.NET Core JWT Bearer 5.0.11 - ASP.NET Core middleware that enables an application to receive an OpenID Connect bearer token
+  - SQLite 7.0.10 - Database
+  - PostGreSQL 7.0.10 - Production Database
+  - Entity Framework Core 7.0.10 - Object-Relational Mapper
+  - Microsoft ASP.NET Core Identity 7.0.10 - ASP.NET Core Identity provider for EF Core
+  - AutoMapper 12.0.1 - Object-to-object mapper
+  - MediatR 11.1.0 - Used to reduce dependencies between objects, specifically when making commands and queries to the database
+  - Microsoft ASP.NET Core JWT Bearer 7.0.10 - ASP.NET Core middleware that enables an application to receive an OpenID Connect bearer token
     
 #### Front End: React
 - Language: TypeScript 4.4.3
@@ -36,5 +37,5 @@ View Website: [https://rwc-reactivities.up.railway.app/](https://rwc-reactivitie
 
 #### Other
 - Cloudinary - Cloud-based image and video management service. Used to upload, store, manage, manipulate, and deliver images and video for websites and apps.
-- Docker (Desktop) - Used to create PostGreSQL container
 - SendGrid - Free email service used to send email verification links to users.
+- Docker (Desktop) - Used to create PostGreSQL container
