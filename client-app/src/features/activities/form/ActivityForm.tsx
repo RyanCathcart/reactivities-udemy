@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Button, Header, Segment } from 'semantic-ui-react';
 import LoadingComponent from '../../../app/layout/LoadingComponent';
@@ -19,10 +19,13 @@ import { useNavigate } from 'react-router-dom';
 export default observer(function ActivityForm() {
   const navigate = useNavigate();
   const { activityStore } = useStore();
-  const { createActivity, updateActivity, loadActivity, loadingInitial } = activityStore;
+  const { createActivity, updateActivity, loadActivity, loadingInitial } =
+    activityStore;
   const { id } = useParams<{ id: string }>();
 
-  const [activity, setActivity] = useState<ActivityFormValues>(new ActivityFormValues());
+  const [activity, setActivity] = useState<ActivityFormValues>(
+    new ActivityFormValues()
+  );
 
   const validationSchema = Yup.object({
     title: Yup.string().required('The activity title is required'),
@@ -34,18 +37,25 @@ export default observer(function ActivityForm() {
   });
 
   useEffect(() => {
-    if (id) loadActivity(id).then((activity) => setActivity(new ActivityFormValues(activity)));
+    if (id)
+      loadActivity(id).then((activity) =>
+        setActivity(new ActivityFormValues(activity))
+      );
   }, [id, loadActivity]);
 
   function handleFormSubmit(activity: ActivityFormValues) {
     if (!activity.id) {
-      let newActivity = {
+      const newActivity = {
         ...activity,
         id: uuid(),
       };
-      createActivity(newActivity).then(() => navigate(`/activities/${newActivity.id}`));
+      createActivity(newActivity).then(() =>
+        navigate(`/activities/${newActivity.id}`)
+      );
     } else {
-      updateActivity(activity).then(() => navigate(`/activities/${activity.id}`));
+      updateActivity(activity).then(() =>
+        navigate(`/activities/${activity.id}`)
+      );
     }
   }
 
@@ -64,7 +74,11 @@ export default observer(function ActivityForm() {
           <Form className='ui form' onSubmit={handleSubmit} autoComplete='off'>
             <MyTextInput name='title' placeholder='Title' />
             <MyTextArea rows={3} placeholder='Description' name='description' />
-            <MySelectInput options={categoryOptions} placeholder='Category' name='category' />
+            <MySelectInput
+              options={categoryOptions}
+              placeholder='Category'
+              name='category'
+            />
             <MyDateInput
               placeholderText='Date'
               name='date'
@@ -83,7 +97,13 @@ export default observer(function ActivityForm() {
               type='submit'
               content='Submit'
             />
-            <Button as={Link} to='/activities' floated='right' type='button' content='Cancel' />
+            <Button
+              as={Link}
+              to='/activities'
+              floated='right'
+              type='button'
+              content='Cancel'
+            />
           </Form>
         )}
       </Formik>

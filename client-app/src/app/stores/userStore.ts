@@ -6,7 +6,7 @@ import { store } from './store';
 
 export default class UserStore {
   user: User | null = null;
-  refreshTokenTimeout: any;
+  refreshTokenTimeout?: NodeJS.Timeout;
 
   constructor() {
     makeAutoObservable(this);
@@ -25,6 +25,7 @@ export default class UserStore {
       router.navigate('/activities');
       store.modalStore.closeModal();
     } catch (error) {
+      console.log(error);
       throw error;
     }
   };
@@ -53,6 +54,7 @@ export default class UserStore {
       router.navigate(`/account/registerSuccess?email=${creds.email}`);
       store.modalStore.closeModal();
     } catch (error) {
+      console.log(error);
       throw error;
     }
   };
